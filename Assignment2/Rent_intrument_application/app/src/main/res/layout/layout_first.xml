@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <!-- Total Borrowed Cost at the top right (same place) -->
+    <TextView
+        android:id="@+id/total_borrowed_cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Total Cost: $0"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Main content below the header -->
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_below="@+id/app_header"
+        android:layout_marginTop="40dp">
+
+        <!-- Layout for the image and the previous/next buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Previous Button on the left side -->
+            <Button
+                android:id="@+id/prev_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Previous"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Instrument Image in the middle -->
+            <ImageView
+                android:id="@+id/instrument_image"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:contentDescription="Instrument Image"
+                android:layout_gravity="center" />
+
+            <!-- Next Button on the right side -->
+            <Button
+                android:id="@+id/next_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Instrument Name -->
+        <TextView
+            android:id="@+id/instrument_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:gravity="center" />
+
+        <!-- Instrument Price -->
+        <TextView
+            android:id="@+id/instrument_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <!-- Borrowing Status Text -->
+        <TextView
+            android:id="@+id/borrow_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="Status: Available"
+            android:layout_marginTop="8dp"
+            android:gravity="center" />
+
+        <!-- Borrow Button -->
+        <Button
+            android:id="@+id/borrow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrow"
+            android:layout_marginTop="24dp" />
+    </LinearLayout>
+
+</RelativeLayout>
